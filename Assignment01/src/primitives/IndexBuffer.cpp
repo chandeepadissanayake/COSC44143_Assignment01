@@ -2,11 +2,6 @@
 
 #include <GL/glew.h>
 
-IndexBuffer::IndexBuffer()
-    : m_RendererID(0), m_Count(0)
-{
-}
-
 IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count)
     : m_Count(count)
 {
