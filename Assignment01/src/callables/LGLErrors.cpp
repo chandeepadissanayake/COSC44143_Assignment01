@@ -1,3 +1,6 @@
+/*
+ * Definitions for LGLErrors.h
+ */
 #include "LGLErrors.h"
 
 #include <iostream>

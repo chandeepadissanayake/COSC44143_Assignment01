@@ -1,3 +1,6 @@
+/*
+ * Class for drawing a simple straight line with OpenGL.
+ */
 #pragma once
 
 #include "Drawable.h"

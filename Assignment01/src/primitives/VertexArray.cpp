@@ -1,3 +1,6 @@
+/*
+ * Definitions for VertexArray.h
+ */
 #include "VertexArray.h"
 
 VertexArray::VertexArray()

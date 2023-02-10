@@ -1,3 +1,6 @@
+/*
+ * Interface for all OpenGL shapes and other objects to be drawn.
+ */
 #pragma once
 
 #include "../primitives/VertexArray.h"

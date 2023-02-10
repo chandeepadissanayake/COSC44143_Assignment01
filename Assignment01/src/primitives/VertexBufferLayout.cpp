@@ -1,0 +1,3 @@
+/*
+ * Definitions for VertexBufferLayout.h
+ */

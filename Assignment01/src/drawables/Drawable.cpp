@@ -1,3 +1,6 @@
+/*
+ * Definitions for Drawable.h
+ */
 #include "Drawable.h"
 
 float Drawable::GetNormalizedCoordinate(float coord, int min, int max)

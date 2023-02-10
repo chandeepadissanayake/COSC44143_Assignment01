@@ -1,3 +1,7 @@
+/*
+ * Entry point for Task 1 of the Assignment
+ * Draws a line with simple OpenGL function calls.
+ */
 #include <iostream>
 
 #include <GL/glew.h>

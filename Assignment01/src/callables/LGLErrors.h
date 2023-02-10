@@ -1,3 +1,6 @@
+/*
+ * Class for OpenGL error handling.
+ */
 #pragma once
 
 #include <GL/glew.h>

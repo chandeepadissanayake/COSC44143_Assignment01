@@ -1,3 +1,6 @@
+/*
+ * Definitions for Renderer.h
+ */
 #include "Renderer.h"
 
 #include "VertexArray.h"

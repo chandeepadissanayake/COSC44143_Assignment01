@@ -1,3 +1,6 @@
+/*
+ * Structs for convenience.
+ */
 #pragma once
 
 struct Vec2

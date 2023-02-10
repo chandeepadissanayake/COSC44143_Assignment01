@@ -1,3 +1,6 @@
+/*
+ * Definitions for SimpleLine.h
+ */
 #include "SimpleLine.h"
 
 #include <iostream>
