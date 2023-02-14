@@ -1,3 +1,6 @@
+/*
+ * Definitions for LineRenderer.h
+ */
 #include "LineRenderer.h"
 
 #include <iostream>

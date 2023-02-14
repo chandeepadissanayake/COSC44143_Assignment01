@@ -1,3 +1,6 @@
+/*
+ * Definitions for the Line Drawers w.r.t. the Tasks 1 and 2
+ */
 #pragma once
 
 class LineRenderer
