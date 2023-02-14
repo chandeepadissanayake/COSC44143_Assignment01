@@ -16,7 +16,7 @@ SimpleLine::SimpleLine(int windowWidth, int windowHeight, Vec2 p1, Vec2 p2)
 
 	m_Vb = new VertexBuffer(m_Endpoints, 2 * 2 * sizeof(float));
 	m_Vbl = new VertexBufferLayout();
-	m_Vbl->Push<float>(2);
+	m_Vbl->Push<float>(2, true);
 	m_Va->AddBuffer(*m_Vb, *m_Vbl);
 }
 

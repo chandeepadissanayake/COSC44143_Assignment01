@@ -1,8 +1,7 @@
-/*
- * Entry point for Task 1 of the Assignment
- * Draws a line with simple OpenGL function calls.
- */
+#include "LineRenderer.h"
+
 #include <iostream>
+#include <string>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -10,11 +9,14 @@
 #include "callables/LGLErrors.h"
 #include "primitives/Renderer.h"
 #include "drawables/SimpleLine.h"
+#include "drawables/BresenhamLine.h"
 
-#define WINDOW_WIDTH 640
-#define WINDOW_HEIGHT 480
+LineRenderer::LineRenderer(unsigned int windowWidth, unsigned int windowHeight)
+    : m_WindowWidth(windowWidth), m_WindowHeight(windowHeight)
+{
+}
 
-int main(void)
+int LineRenderer::DrawLine(LineDrawingAlgorithm alg)
 {
     GLFWwindow* window;
 
@@ -22,8 +24,13 @@ int main(void)
     if (!glfwInit())
         return -1;
 
+    std::string windowTitle = 
+        (alg == LINE_ALGO_DEFAULT) ? "Simple Line" :
+        (alg == LINE_ALGO_BRESENHAM) ? "Bresenham Line" :
+        "";
+
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Simple Line", NULL, NULL);
+    window = glfwCreateWindow(m_WindowWidth, m_WindowHeight, windowTitle.c_str(), NULL, NULL);
     if (!window)
     {
         glfwTerminate();
@@ -35,6 +42,7 @@ int main(void)
 
     if (glewInit() != GLEW_OK) {
         std::cout << "Error in GLEW Init" << std::endl;
+        return -1;
     }
 
     /* Enable Error Output */
@@ -44,16 +52,21 @@ int main(void)
     /* Renderer */
     Renderer renderer;
 
-    /* Defining the object to be drawn */
-    SimpleLine line(WINDOW_WIDTH, WINDOW_HEIGHT, {10.0, 10.0}, {630.0, 470.0});
-
-    /* Loop until the user closes the window */
+    Drawable* line = 
+        (alg == LINE_ALGO_DEFAULT) ? (Drawable*) new SimpleLine(m_WindowWidth, m_WindowHeight, { 10.0f, 10.0f }, { 630.0f, 470.0f }) :
+        (alg == LINE_ALGO_BRESENHAM) ? (Drawable*) new BresenhamLine(m_WindowWidth, m_WindowHeight, { 10.0f, 10.0f }, { 630.0f, 470.0f }) :
+        nullptr;
+    
+    if (line == nullptr) {
+        return -1;
+    }
+    
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
 
-        renderer.Draw(line);
+        renderer.Draw(*line);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
@@ -61,6 +74,8 @@ int main(void)
         /* Poll for and process events */
         glfwPollEvents();
     }
+
+    delete line;
 
     glfwTerminate();
     return 0;
