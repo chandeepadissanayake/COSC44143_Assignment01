@@ -10,9 +10,20 @@ void Renderer::Draw(Drawable& drawable) const
 {
 	VertexArray* va = drawable.GetVertexArray();
 	IndexBuffer* ib = drawable.GetIndexBuffer();
+	Shader* shader = drawable.GetShader();
 
-	va->Bind();
-	if (ib != nullptr) {
+	if (shader != nullptr)
+	{
+		shader->Bind();
+	}
+
+	if (va != nullptr)
+	{
+		va->Bind();
+	}
+
+	if (ib != nullptr)
+	{
 		ib->Bind();
 	}
 

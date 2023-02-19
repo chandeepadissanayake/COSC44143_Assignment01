@@ -38,6 +38,11 @@ IndexBuffer* SimpleLine::GetIndexBuffer()
 	return nullptr;
 }
 
+Shader* SimpleLine::GetShader()
+{
+	return nullptr;
+}
+
 void SimpleLine::Draw()
 {
 	glDrawArrays(GL_LINES, 0, 2);

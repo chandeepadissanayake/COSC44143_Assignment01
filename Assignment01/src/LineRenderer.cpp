@@ -43,7 +43,8 @@ int LineRenderer::DrawLine(LineDrawingAlgorithm alg)
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-    if (glewInit() != GLEW_OK) {
+    if (glewInit() != GLEW_OK)
+    {
         std::cout << "Error in GLEW Init" << std::endl;
         return -1;
     }
@@ -60,7 +61,8 @@ int LineRenderer::DrawLine(LineDrawingAlgorithm alg)
         (alg == LINE_ALGO_BRESENHAM) ? (Drawable*) new BresenhamLine(m_WindowWidth, m_WindowHeight, { 10.0f, 10.0f }, { 630.0f, 470.0f }) :
         nullptr;
     
-    if (line == nullptr) {
+    if (line == nullptr)
+    {
         return -1;
     }
     

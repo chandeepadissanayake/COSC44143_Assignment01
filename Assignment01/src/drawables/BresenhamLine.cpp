@@ -64,6 +64,11 @@ IndexBuffer* BresenhamLine::GetIndexBuffer()
     return nullptr;
 }
 
+Shader* BresenhamLine::GetShader()
+{
+    return nullptr;
+}
+
 void BresenhamLine::Draw()
 {
     glDrawArrays(GL_POINTS, 0, m_CoordsCount / 2);

@@ -22,6 +22,7 @@ public:
 	// Inherited via Drawable
 	virtual VertexArray* GetVertexArray() override;
 	virtual IndexBuffer* GetIndexBuffer() override;
+	virtual Shader* GetShader() override;
 	virtual void Draw() override;
 };
 

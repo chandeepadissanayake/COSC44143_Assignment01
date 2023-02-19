@@ -6,6 +6,7 @@
 #pragma once
 
 #include "../drawables/Drawable.h"
+#include "Shader.h"
 
 class Renderer
 {

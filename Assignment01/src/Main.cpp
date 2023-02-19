@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "LineRenderer.h"
+#include "ModelRenderer.h"
 
 int main(int argc, char** argv)
 {
@@ -19,6 +20,12 @@ int main(int argc, char** argv)
 		{
 			LineRenderer lineRenderer(640, 480);
 			return lineRenderer.DrawLine(LineRenderer::LineDrawingAlgorithm::LINE_ALGO_BRESENHAM);
+			break;
+		}
+		case '3':
+		{
+			ModelRenderer modelRenderer("Backpack Model", 800, 600);
+			return modelRenderer.DrawModel();
 			break;
 		}
 		default:

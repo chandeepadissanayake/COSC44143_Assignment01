@@ -20,8 +20,9 @@ public:
 	~SimpleLine();
 
 	// Inherited via Drawable
-	VertexArray* GetVertexArray() override;
-	IndexBuffer* GetIndexBuffer() override;
-	void Draw() override;
+	virtual VertexArray* GetVertexArray() override;
+	virtual IndexBuffer* GetIndexBuffer() override;
+	virtual Shader* GetShader() override;
+	virtual void Draw() override;
 };
 

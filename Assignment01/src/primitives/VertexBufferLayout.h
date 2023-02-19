@@ -58,7 +58,7 @@ public:
 		m_Elements.push_back({ GL_UNSIGNED_INT, count, GL_FALSE });
 		if (shouldStride)
 		{
-			m_Stride += count * VertexBufferElement::GetSizeOfType(GL_FLOAT);
+			m_Stride += count * VertexBufferElement::GetSizeOfType(GL_UNSIGNED_INT);
 		}
 	}
 
@@ -68,7 +68,7 @@ public:
 		m_Elements.push_back({ GL_UNSIGNED_BYTE, count, GL_TRUE });
 		if (shouldStride)
 		{
-			m_Stride += count * VertexBufferElement::GetSizeOfType(GL_FLOAT);
+			m_Stride += count * VertexBufferElement::GetSizeOfType(GL_UNSIGNED_BYTE);
 		}
 	}
 

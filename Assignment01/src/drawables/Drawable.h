@@ -5,6 +5,7 @@
 
 #include "../primitives/VertexArray.h"
 #include "../primitives/IndexBuffer.h"
+#include "../primitives/Shader.h"
 
 class Drawable
 {
@@ -13,6 +14,7 @@ protected:
 public:
 	virtual VertexArray* GetVertexArray() = NULL;
 	virtual IndexBuffer* GetIndexBuffer() = NULL;
+	virtual Shader* GetShader() = NULL;
 
 	virtual void Draw() = NULL;
 };
