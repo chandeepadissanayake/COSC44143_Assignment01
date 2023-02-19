@@ -116,30 +116,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="res\shaders\model_loading.fs" />
-    <Text Include="res\models\backpack\source_attribution.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\model_loading.vs" />
-    <None Include="res\models\backpack\backpack.mtl" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\models\backpack\ao.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\models\backpack\diffuse.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\models\backpack\normal.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\models\backpack\roughness.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="res\models\backpack\specular.jpg">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="res\models\backpack\backpack.obj" />
   </ItemGroup>
 </Project>

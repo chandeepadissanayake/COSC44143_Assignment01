@@ -343,22 +343,10 @@
     <ClInclude Include="src\primitives\VertexBufferLayout.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="res\models\backpack\source_attribution.txt" />
     <Text Include="res\shaders\model_loading.fs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\models\backpack\backpack.mtl" />
     <None Include="res\shaders\model_loading.vs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\models\backpack\ao.jpg" />
-    <Image Include="res\models\backpack\diffuse.jpg" />
-    <Image Include="res\models\backpack\normal.png" />
-    <Image Include="res\models\backpack\roughness.jpg" />
-    <Image Include="res\models\backpack\specular.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="res\models\backpack\backpack.obj" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
